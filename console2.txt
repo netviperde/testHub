@@ -1,0 +1,79 @@
+
+uwe.richter@B242 MINGW64 ~
+$ ls -all
+total 11742
+drwxr-xr-x 1 uwe.richter 1049089        0 Apr  9 09:08  ./
+drwxr-xr-x 1 uwe.richter 1049089        0 Apr  4 12:41  ../
+-rw-r--r-- 1 uwe.richter 1049089       52 Apr  5 14:47  .bash_history
+-rw-r--r-- 1 uwe.richter 1049089       89 Apr  5 14:33  .gitconfig
+-rw-r--r-- 1 uwe.richter 1049089 11998522 Apr  6 16:20 'Angular __ Copy jykw-g6qp-8bet-hnar.pdf'
+drwxr-xr-x 1 uwe.richter 1049089        0 Apr  6 10:28  docu/
+drwxr-xr-x 1 uwe.richter 1049089        0 Apr  4 14:12  links/
+-rw-r--r-- 1 uwe.richter 1049089     9534 Apr  9 09:08  logo.gif
+drwxr-xr-x 1 uwe.richter 1049089        0 Apr  3 11:27  projekt/
+
+uwe.richter@B242 MINGW64 ~
+$ cd /C/
+
+uwe.richter@B242 MINGW64 /C
+$ cd GIT
+
+uwe.richter@B242 MINGW64 /C/GIT
+$ git clone https://github.com/netviperde/testHub.git
+Cloning into 'testHub'...
+warning: You appear to have cloned an empty repository.
+
+uwe.richter@B242 MINGW64 /C/GIT
+$ git config --global user.name "testHub"
+
+uwe.richter@B242 MINGW64 /C/GIT
+$ git config --global user.email "netviperde@netviper.de"
+
+uwe.richter@B242 MINGW64 /C/GIT
+$ git clone https://github.com/netviperde/testHub
+fatal: destination path 'testHub' already exists and is not an empty directory.
+
+uwe.richter@B242 MINGW64 /C/GIT
+$ git clone https://github.com/netviperde/testHub.git
+fatal: destination path 'testHub' already exists and is not an empty directory.
+
+uwe.richter@B242 MINGW64 /C/GIT
+$ cd testHub/
+
+uwe.richter@B242 MINGW64 /C/GIT/testHub (master)
+$ ls -all
+total 8
+drwxr-xr-x 1 uwe.richter 1049089    0 Apr  9 09:25 ./
+drwxr-xr-x 1 uwe.richter 1049089    0 Apr  9 09:18 ../
+drwxr-xr-x 1 uwe.richter 1049089    0 Apr  9 09:18 .git/
+-rw-r--r-- 1 uwe.richter 1049089 1474 Apr  9 09:25 console.txt
+
+uwe.richter@B242 MINGW64 /C/GIT/testHub (master)
+$ git add console.txt
+
+uwe.richter@B242 MINGW64 /C/GIT/testHub (master)
+$ git remote add console.log https://github.com/netviperde/testHub.git
+
+uwe.richter@B242 MINGW64 /C/GIT/testHub (master)
+$ git commit -m "first" console.txt
+[master (root-commit) d89b05a] first
+ 1 file changed, 41 insertions(+)
+ create mode 100644 console.txt
+
+uwe.richter@B242 MINGW64 /C/GIT/testHub (master)
+$ git remote add origin https://github.com/netviperde/testHub.git
+fatal: remote origin already exists.
+
+uwe.richter@B242 MINGW64 /C/GIT/testHub (master)
+$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 668 bytes | 668.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/netviperde/testHub.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+uwe.richter@B242 MINGW64 /C/GIT/testHub (master)
+$
